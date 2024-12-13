@@ -1,0 +1,247 @@
+/* home */
+.h1{
+    font-size: 32px;
+    color: var(--1, #2B2C2D);
+    font-weight: 500;
+    white-space: normal;
+}
+
+.h2{
+    font-size: 24px;
+    color: var(--1, #2B2C2D);
+    font-weight: 500;
+    white-space: normal;
+}
+
+.h3{
+    font-size: 18px;
+    color: var(--1, #2B2C2D);
+    font-weight: 400;
+    white-space: normal;
+}
+
+.h4{
+    font-size: 16px;
+    color: var(--2, #6F7174);
+    font-weight: 400;
+    white-space: normal;
+}
+
+.h5{
+    font-size: 14px;
+    color: var(--1, #6F7174);
+    font-weight: 400;
+    white-space: normal;
+}
+
+.h6{
+    font-size: 12px;
+    color: var(--2, #6F7174);
+    font-weight: 400;
+    white-space: normal;
+}
+
+.body{
+    display: flex;
+    
+}
+.left-nav-bar{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 88px; /* 左侧宽度 */
+    /* background-color: #f4f4f4; */
+    border-right: 1px solid #dddddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-nav-bar-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    background-color: #fff;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    text-align: center; /* 水平居中 */
+
+}
+
+.home-right-content{
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+}
+
+.home-right-header{  
+    display: flex;
+    height: 100vh;
+}
+.home-right-header-title{
+    /* flex-direction: column;
+    padding-right: 7%;
+    padding-left: 7%;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex: 0 1 auto;
+    flex: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直方向居中 */
+    align-items: flex-start;    /* 水平方向居中 */
+    padding-right: 7%;
+    padding-left: 7%;
+    flex-basis: 44%;   
+                    
+    
+}
+.home-title-font1-1{
+    margin-bottom: 26px;
+}
+
+.home-right-header-photo{
+    background-image: url("images/man.png");
+    background-size: cover;
+    background-position: center;
+    flex-basis: 56%;  
+    margin-top: 0;
+    position: relative;
+    
+}
+.home-right-header-photo-botton{
+    z-index: 1;
+    width: 64px;
+    height: 64px;
+    background-color: #3E73AD;
+    position: absolute;
+    bottom: 32px;
+    left: -32px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.home-content-self{
+    display: flex;
+    padding: 158px  7%;
+    
+
+}
+.home-right-header-photo-botton-jiantou{
+    width: 18px;
+}
+.home-content-self-about{
+    flex-basis: 30%;
+}
+.self-about-title{
+    padding-bottom: 40px;
+}
+.self-about-content1{
+    padding-bottom: 24px;
+
+}
+.home-content-self-jingyan{
+    flex-basis: 70%;
+    padding-left: 7%;
+}
+.self-jingyan-1{
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+
+}
+.self-jingyan-2{
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -1px;
+}
+.animotion-left3{
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -1px;
+}
+
+.home-content-editor{
+    display: flex;
+    padding: 0px 7% 158px;
+    height: auto;
+
+}
+
+.content-editor-picture{
+    margin-right: 5%;
+    height: 50vh;
+    flex-basis: 60%;
+    background-image: url("./images/editor-样机图片.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.content-editor-content{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    /* align-items: center;使内容在水平方向居中 */
+    height: auto;
+    justify-content: center; /* 使内容在垂直方向居中 */
+    
+}
+.editor-content-title{
+    padding-bottom: 24px;
+}
+
+.editor-content-title-button{
+    height: 32px; /* 设置按钮高度 */
+    width: 80px;
+    line-height: 32px; /* 设置文字垂直居中 */
+    color: white;
+    background-color: #3E73AD;
+    border: none;
+    padding: 0 10px; /* 设置左右内边距 */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-top: 32px;
+}
+
+.editor-content-title-button:hover{
+    background-color: #4784C5;
+}
+
+.content-Startpedaling-picture{
+    margin-left: 5%;
+    height: 50vh;
+    flex-basis: 60%;
+    background-image: url("./images/startpedaling\ 1.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content-Startpedaling-content{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    /* align-items: center;使内容在水平方向居中 */
+    height: auto;
+    justify-content: center; /* 使内容在垂直方向居中 */
+}
+
+.footer{
+    border-top:1px solid #dddddd;
+    /* margin: 0px 24px; */
+    padding: 24px 24px;
+    background-color: #3E73AD;
+    color: #fff;
+}
+

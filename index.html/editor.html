@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ZH-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editor</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./css.css">
+    <style>
+        html, body {
+    overflow-x: hidden; /* 禁止横向滚动 */
+}
+        .home-right-content{
+            margin: 122px 7%;
+            display: flex;
+            
+        }
+
+        .header-content{
+            display: flex;
+            height: 440px;
+            margin-bottom: 128px;
+            justify-content: space-between;
+        }
+        .editor-header-left-content{
+            flex-direction: column;
+            margin-right: 7%;
+            flex-basis: 30%;
+            display: flex;
+            
+        }
+        .nayo-logo{
+            background-image: url("./images/nayo-logo.png");
+            width: 370px;
+            height: 47px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom: 54px;
+            
+        }
+        .header-left-content-titlent{
+            display: flex;
+        }
+
+        .editor-header-picture{
+            background-image: url("./images/editor-header.png");
+            flex-basis: 70%;
+            height: auto;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+
+        .editor-mubiao-content{
+            display: flex;
+
+        }
+
+        .editor-mubiao-content{
+            justify-content: space-between;
+        }
+
+        .editor-tuandui-box{
+            margin-top: 128px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .editor-tuabdui-content1{
+            width: 260px;
+        }
+
+        .tuandui-content1-title2{
+            margin-bottom: 6px;
+        }
+
+        .editor-guocheng{
+            margin-top: 128px;
+            flex-direction: column;
+            display: flex;
+            flex: 1;
+        }
+
+        .editor-guocheng-picture{
+            background-image: url("./images/editor-guocheng.png");
+            flex-basis: 500px;
+            height: auto;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .editor-yanjiu{
+            width: 60%;
+        }
+        
+        .jianju{
+            margin-top: 128px;
+        }
+
+        .editor-jinpingfenxi{
+            display: flex;
+            /* height: 600px; */
+        }
+
+        .jinpingfenxi-content{
+            flex-basis: 30%;
+            margin-right: 7%;
+            /* height: 600px; */
+
+        }
+
+        .jinpingfenxi-image{
+            /* display: flex; */
+            flex-basis: 70%;
+            padding: right 7%; ;
+            
+            
+        }
+
+        .jinpingfenxi-imageall{
+            /* display: flex; */
+        }
+
+        .jinpingfenxi-image1{
+            /* max-width: 100%; */
+            /* max-height: 100%; */
+            width: 100%;
+            object-fit: contain;
+            margin-bottom: 12px;
+            
+
+        }
+
+       
+
+        #prev-btn{
+            background-image: url("images/jinpingfenxi-left-btn.png");
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-color: #fff;
+            border: 0px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            align-self: center; 
+            margin-right: 16px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08); /* 添加投影 */
+            transition: box-shadow 0.3s ease-in-out; /* 添加过渡动画 */
+            
+        }
+
+        #prev-btn:hover{
+            box-shadow: none;
+            
+        }
+
+        #next-btn{
+            background-image: url("images/jinpingfenxi-right-btn.png");
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-color: #fff;
+            border: 0px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            align-self: center; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08); /* 添加投影 */
+            transition: box-shadow 0.3s ease-in-out; /* 添加过渡动画 */
+        }
+
+        #next-btn:hover{
+            box-shadow: none;
+        }
+
+        .yonghudiaoyan-content{
+            margin: 0px 7%;
+            display: flex;
+            margin-top: 36px;
+        }
+
+        .yonghudiaoyan-content{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .yonghudiaoyan-content-1{
+            margin-bottom: 24px;
+        }
+
+        .yonghudiaoyan-content-2{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .yonghudiaoyan-content-1-1{
+            width: 646px;
+            margin-bottom: 16px;
+        }
+
+        .editor-shejimubiao-picture{
+            background-image: url("images/shejimubiao-picture.png");
+            flex-basis: 400px;
+            height: auto;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: 32px;
+            
+        }
+
+        .editor-shejimubiao{
+            
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+    </style>
+</head>
+<body class="body" >
+    <!-- 侧边导航栏 -->
+    <div class="left-nav-bar">
+        <div class="left-nav-bar-logo">
+            <a href="home.html">
+                <img style="height: 88px; width: 88px;" src="./images/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="left-nav-bar-content">
+            <section style="font-size: 16px; font-weight: 500; font-family: Arial, Helvetica, sans-serif ; color: #111111; letter-spacing: 2px;">张衡 “Starry”</section>
+            <section style="font-size: 12px; font-weight: 400; font-family: Arial, Helvetica, sans-serif; color: #777777;">UI/UX设计师</section>
+        </div>
+        <div class="left-nav-bar-jianli">
+            <a href="http://127.0.0.1:5501/home.html#">
+                <img style="height: 88px; width: 88px;" src="./images/简历.png" alt="jianli">
+            </a>
+        </div>
+    </div>
+
+    <div class="home-right-content">
+        <!-- 头部 -->
+        <div class="header-content">
+            <div class="editor-header-left-content">
+                <div class="nayo-logo">
+    
+                </div>
+                <section class="header-left-content-titlent h1">
+                    背景
+                </section>
+                <br>
+                <section class="header-left-content-titlent h4">
+                    公司为适应市场及发展，研发模块化移液平台。以前的一台型号仪器匹配一款软件的的情况会产生巨大研发成本和维护成本，对于用户来说需要学习多款软件，学习成本高效率低。因此计划研发一款通用性实验编辑软件以适配多种型号仪器。
+                </section>
+            </div>
+    
+            <div class="editor-header-picture">
+    
+            </div>
+        </div>
+        
+        <div class="editor-mubiao-content">
+            <section class="editor-mubiao-content1">
+                <section class="mubiao-content1-title1 h2">
+                    目标
+                </section><br>
+                <section class="mubiao-content1-title2 h5">
+                    优化架构，优化交互逻辑，提高使用效率，提高用户体验。
+                </section>
+            </section>
+            <section class="editor-mubiao-content1">
+                <section class="mubiao-content1-title1 h2">
+                    挑战
+                </section><br>
+                <section class="mubiao-content1-title2 h5">
+                    未接触过pc设计，中途介入，实验专业知识较少，开发资源紧张。
+                </section>
+            </section>
+        </div>
+
+        <div class="editor-tuandui-box">
+            <section class="editor-tuabdui-content1">
+                <section class="tuandui-content1-title1 h2">
+                    团队
+                </section><br>
+                <section class="tuandui-content1-title2 h5">
+                    • UX/UI设计师：张衡
+                </section>
+                <section class="tuandui-content1-title2 h5">
+                    • 产品经理：产品莉莉、产品培元、 产品组长武经理
+                </section>
+                <section class="tuandui-content1-title2 h5">
+                    • 建模师：建模师培培
+                </section>
+            </section>
+
+            <section class="editor-tuabdui-content1">
+                <section class="tuandui-content1-title1 h2">
+                    时间线
+                </section><br>
+                <section class="tuandui-content1-title2 h5">
+                    • 4周-探索与研究
+                </section>
+                <section class="tuandui-content1-title2 h5">
+                    • 6周-视觉设计
+                </section>
+                <section class="tuandui-content1-title2 h5">
+                    • 8周-测试优化
+                </section>
+                <section class="tuandui-content1-title2 h5">
+                    • 4周-后续优化
+                </section>
+            
+            </section>
+
+            <section class="editor-tuabdui-content1">
+                <section class="tuandui-content1-title1 h2">
+                    工具
+                </section><br>
+                <section class="tuandui-content1-title2 h5">
+                    • Figma
+                </section>
+                <section class="tuandui-content1-title2 h5">
+                    • PS
+                </section>
+                <section class="tuandui-content1-title2 h5">
+                    • HTML/CSS
+                </section>
+            </section>
+        </div>
+
+        <div class="editor-guocheng">
+            <section class="guocheng-content1-title1 h2">
+                过程
+            </section><br>
+
+            <div class="editor-guocheng-picture">
+
+            </div>
+        </div>
+
+        <div class="editor-yanjiu jianju">
+            <section class="yanjiu-content1-title1 h2">
+                研究
+            </section><br>
+
+            <section class="yanjiu-content1-title2 h5">
+                通过调研发现产品功能较为复杂，涉及较多生物实验专业知识和仪器知识，需要进行相关内容学习，因此我采用了用户访谈，观察，竞品学习的方式深入了解本项目内容。
+            </section>
+        </div>
+
+        <div class="editor-jinpingfenxi jianju">
+            <div class="jinpingfenxi-content">
+                <section class="jinpingfenxi-content1-title1 h2">
+                    竞品分析
+                </section><br>
+                <section class="jinpingfenxi-content1-title1 h5">
+                    通过2周的学习，了解用户、功能、流程、体验等方面的相关情况并梳理了部分产品框架。这样可以更深入了解和优化本项目产品。
+                </section>
+            </div>
+            
+            <div class="jinpingfenxi-image">
+                <div class="jinpingfenxi-imageall">
+                
+                <img class="jinpingfenxi-image1" id="slider-image" src="images/fenxi1.png" alt="slider image" />
+                <button id="prev-btn"></button>
+                <button id="next-btn"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="editor-yonghudiaoyan jianju">
+            <section class="yonghudiaoyan-title h2">
+                用户调研
+            </section>
+            <section class="yonghudiaoyan-content">
+                <section class="yonghudiaoyan-content-1 h3">经过用户访谈，观察，旅程地图分析得到以下结果。</section>
+                <section class="yonghudiaoyan-content-2">
+                    <section class="yonghudiaoyan-content-1-1 h5">• 作为用户，我希望快速编辑正确的实验内容，同时减少学习成本。</section>
+                    <section class="yonghudiaoyan-content-1-1 h5">• 作为用户，我的体验很大程度上依赖于实验编辑的效率，因此页面布局结构合理、反馈及时对我来说至关重要。</section>
+                </section>
+                <section class="yonghudiaoyan-content-2">
+                    <section class="yonghudiaoyan-content-1-1 h5">•	作为用户，我期望交互设计统一、反馈明确、提示信息清晰，页面结构直观，便于操作，有较好的编辑错误提示更好啦。</section>
+                    <section class="yonghudiaoyan-content-1-1 h5">•	作为用户，我希望产品设计具有一致性，减少因样式或交互不统一而导致的使用困惑。</section>
+                </section>
+            </section>
+        </div>
+
+        <div class="editor-shejimubiao jianju">
+            <section class="yonghudiaoyan-title h2">
+                设计目标
+            </section>
+
+            <div class="editor-shejimubiao-picture">
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const images = ["images/fenxi1.png", "images/fenxi2.png", "images/fenxi3.png","images/fenxi4.png","images/fenxi5.png"];
+        let currentIndex = 0;
+
+        const sliderImage = document.getElementById("slider-image");
+        const prevBtn = document.getElementById("prev-btn");
+        const nextBtn = document.getElementById("next-btn");
+
+        prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        sliderImage.src = images[currentIndex];
+        });
+
+        nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        sliderImage.src = images[currentIndex];
+        });
+    </script>
+</body>
+</html>
